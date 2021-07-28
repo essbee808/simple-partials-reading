@@ -1,8 +1,5 @@
 <%= form_tag posts_path do %>
-  <label>Post title:</label><br>
-  <%= text_field_tag :title, @post.title %><br>
-
-  <label>Post Description</label><br>
-  <%= text_area_tag :description, @post.description %><br>
-  <%= submit_tag "Submit Post" %>
+  <%= render 'form' %>
+  <!-- did not need to specify the folder that the partial lives in i.e. posts/form 
+  because both posts/new and posts/edit reference a partial in the same folder -->
 <% end %>
